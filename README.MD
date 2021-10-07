@@ -22,3 +22,5 @@ python run.py
 After all you will see the link to the application index page in terminal.
 
 On the index page (`````'/'`````) you can find some extra description and instructions.
+
+Don't forget! All vulnerable data, such as SECRET_KEY or SALT for password hash must be hide if you are using application in production. You should also change DEBUG mode to False.
