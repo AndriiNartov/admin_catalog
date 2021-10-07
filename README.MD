@@ -7,12 +7,11 @@ The object of this task is to create a simple flask application using flask-admi
 
 You can do it by 2 ways:
 ### Using Docker
-You should change your working directory to 'admin_catalog' and run commands:
+You should change your working directory to 'admin_catalog' and run command:
 ```
-docker-compose build --no-cache
 docker-compose up
 ```
-After all you will see the link to the application index page.
+
 ### Without Docker
 
 You should change your work directory to 'admin_catalog', activate your virtual environment(if you are using it) and run commands:
@@ -20,6 +19,6 @@ You should change your work directory to 'admin_catalog', activate your virtual 
 pip install -r requirements.txt
 python run.py
 ```
-After all application will be available at  ```http://127.0.0.1:5000/```
+After all you will see the link to the application index page in terminal.
 
-On the main page (`````'/'`````) you can find some extra description and instructions.
+On the index page (`````'/'`````) you can find some extra description and instructions.
