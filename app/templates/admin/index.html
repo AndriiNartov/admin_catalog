@@ -1,0 +1,20 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col" style="font-size: 18px">
+            <p>
+                Hi, <b>{{ current_user.email }}</b>. This is the home page of Admin panel. Here you can make CRUD operations over your models.
+                You can find button, named "Prefill Database" below. If you click on it, database will be automatically filled in 5 instances of Product and Address models.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <a class="btn btn-success" href="{{ url_for('fill_db') }}">Prefill Database</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

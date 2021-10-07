@@ -1,0 +1,39 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-8 offset-2" style="font-size: 18px">
+            <p>
+                Hi! This is the main page of simple test application.
+                The task is to create application, using Flask framework and two related libraries:
+                <ul>
+                    <li><a href="http://flask-admin.readthedocs.io/" target="_blank">Flask-Admin</a></li>
+                    <li><a href="http://flask-security-too.readthedocs.io/" target="_blank">Flask-Security</a></li>
+                </ul>
+                Using flask-admin I had to implement the catalog of some products with those specifications:
+                <ul>
+                    <li>color</li>
+                    <li>weight</li>
+                    <li>price</li>
+                </ul>
+                This catalog also must include address of delivery and some filters, which we can use for filtering addresses in catalog by:
+                <ul>
+                    <li>country</li>
+                    <li>city</li>
+                    <li>street</li>
+                </ul>
+                Authorization to admin-catalog must have been done using flask-security.
+                For convenience, by default, in database is already created user. The credentials are:
+                <ul>
+                    <li>Email: <b>admin@example.com</b></li>
+                    <li>Password: <b>admin</b></li>
+                </ul>
+                You can <a href="{{ url_for('security.login') }}">log in</a> using these credentials or create your own user <a href="{{ url_for('security.register') }}">here</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

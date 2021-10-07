@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Index</title>
+  </head>
+<body>
+
+<div class="container" style="">
+    <div class="row mt-5">
+        <div class="col-6 offset-3">
+            <div class="list-group">
+              <a href="{{ url_for('index') }}" class="list-group-item list-group-item-action {% if request.path == url_for('index') %}active{% endif %}" aria-current="true">
+                Main page
+              </a>
+              <a href="/register" class="list-group-item list-group-item-action {% if request.path == '/register' %}active{% endif %}" aria-current="true">
+                Sign Up
+              </a>
+              <a href="/login" class="list-group-item list-group-item-action {% if request.path == '/login' %}active{% endif %}">Login</a>
+              <a href="/admin" class="list-group-item list-group-item-action">Admin</a>
+            </div>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</div>
+
+
+
+</body>
+
+</html>
